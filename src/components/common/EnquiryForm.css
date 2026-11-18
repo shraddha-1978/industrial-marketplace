@@ -1,0 +1,37 @@
+/* ===================== Enquiry Form ===================== */
+.enquiry-form {
+  width: 100%;
+}
+.ef-success {
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+.ef-success strong {
+  display: block;
+  margin-bottom: 2px;
+}
+.ef-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.ef-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.ef-note svg {
+  color: var(--green);
+}
+
+@media (max-width: 600px) {
+  .ef-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

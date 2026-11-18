@@ -1,0 +1,180 @@
+/* ===================== Categories Page ===================== */
+.categories-page {
+  padding-bottom: 60px;
+}
+.cp-hero {
+  background: linear-gradient(135deg, #0a2540 0%, #0d3a8c 100%);
+  color: #fff;
+  padding: 44px 0;
+  text-align: center;
+}
+.cp-hero h1 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+.cp-hero p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+}
+
+.cp-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 8px 0 48px;
+}
+.cp-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 220px;
+  gap: 24px;
+  padding: 22px 24px;
+  transition: box-shadow var(--t-base);
+}
+.cp-row:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.cpr-left {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.cpr-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cal);
+  color: var(--ca);
+  flex-shrink: 0;
+}
+.cpr-info h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.cpr-info p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+.cpr-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.cpr-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.cpr-meta svg {
+  color: var(--ca);
+}
+
+.cpr-products {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cpr-product {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  background: var(--grey-50);
+  border: 1px solid var(--border);
+  transition: all var(--t-fast);
+}
+.cpr-product:hover {
+  background: var(--blue-50);
+  border-color: var(--blue-100);
+  transform: translateX(3px);
+}
+.cpr-prod-ic {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cpr-prod-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-heading);
+  display: block;
+  max-width: 220px;
+}
+.cpr-prod-price {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.cpr-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+.cpr-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.cpr-keywords .chip {
+  font-size: 11.5px;
+  padding: 3px 9px;
+}
+
+/* Quick nav */
+.cp-quick {
+  margin-top: 16px;
+}
+.cp-quick h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.cp-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cp-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cpr-cta {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cp-quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .cp-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cpr-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cp-quick-grid {
+    grid-template-columns: 1fr;
+  }
+}

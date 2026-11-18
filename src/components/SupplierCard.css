@@ -1,0 +1,140 @@
+/* ===================== Supplier Card ===================== */
+.scard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 14px;
+}
+.scard-top {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.scard-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.3);
+}
+.scard-id {
+  flex: 1;
+  min-width: 0;
+}
+.scard-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.scard-name {
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--text-heading);
+  transition: color var(--t-fast);
+  line-height: 1.3;
+}
+.scard-name:hover {
+  color: var(--blue-600);
+}
+.scard-loc {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.scard-stats {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.sc-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sc-stat-val {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--text-heading);
+}
+.sc-stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.scard-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.scard-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.scard-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-heading);
+  background: var(--grey-100);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+.sc-badge svg {
+  color: var(--green);
+}
+
+.scard-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 4px;
+  flex-wrap: wrap;
+}
+.scard-prods {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.scard-actions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .scard-foot {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .scard-actions .btn {
+    flex: 1;
+  }
+}

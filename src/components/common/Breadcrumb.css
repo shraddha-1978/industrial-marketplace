@@ -1,0 +1,30 @@
+/* ===================== Breadcrumb ===================== */
+.breadcrumb ol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  padding: 22px 0 18px;
+}
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+}
+.bc-link {
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color var(--t-fast);
+}
+.bc-link:hover {
+  color: var(--blue-600);
+}
+.bc-sep {
+  color: var(--grey-300);
+}
+.bc-current {
+  color: var(--text-heading);
+  font-weight: 600;
+}

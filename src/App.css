@@ -1,0 +1,54 @@
+/* ===================== App-level styles ===================== */
+
+/* 404 Not Found page */
+.nf-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 90px 24px;
+  min-height: 60vh;
+  gap: 12px;
+}
+.nf-code {
+  font-size: 100px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -4px;
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin-bottom: 4px;
+}
+.nf-title {
+  font-size: 28px;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+}
+.nf-sub {
+  color: var(--text-muted);
+  max-width: 420px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Shared products-grid used across multiple pages */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1100px) {
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .products-grid { grid-template-columns: 1fr; }
+  .nf-code { font-size: 72px; }
+  .nf-title { font-size: 22px; }
+}
